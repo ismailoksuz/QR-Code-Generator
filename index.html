@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex items-start justify-center p-4 sm:p-8">
+    <div class="main-container">
+        <header class="text-center">
+            <h1 class="text-4xl font-extrabold text-white tracking-wide">QR CODE GENERATOR</h1>
+        </header>
+        <div class="card-area">
+            <div>
+                <label for="qr-data" class="label-text">Data Input:</label>
+                <input type="text" id="qr-data" placeholder="Ex: Text, URL, or any data" 
+                    class="input-style w-full px-4 py-3 border rounded-lg text-white transition duration-150" />
+            </div>
+            <button id="generate-button" class="primary-button text-white font-bold py-3 px-6 rounded-lg w-full text-lg uppercase shadow-lg shadow-[#00A389]/30">
+                GENERATE QR CODE
+            </button>
+            <div class="pt-4 border-t border-slate-700/50 preview-section">
+                <h2 class="preview-title">QR Code Preview</h2>
+                <div id="qrcode-container">
+                    <p id="placeholder-text" class="placeholder-text">Press the Generate button.</p>
+                </div>
+                <p id="message-box" class="hidden mt-4 text-sm text-center font-medium"></p>
+                <button id="download-button" class="mt-4 primary-button text-white font-bold py-2 px-4 rounded-lg w-full text-base" disabled>
+                    Download PNG
+                </button>
+            </div>
+        </div>
+        <div class="footer-attribution">
+            A utility built with Gemini. Code attribution: <a href="https://github.com/ismailoksuz" target="_blank">github.com/ismailoksuz</a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
